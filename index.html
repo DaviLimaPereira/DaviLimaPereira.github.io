@@ -11,13 +11,32 @@
     <title>II EXPOSaúde 2024</title>
   </head>
   <body>
-    <h1>II EXPOSaúde Praia Grande 2024 - Inscrições/h1>
+    <h1>II EXPOSaúde Praia Grande 2024 - Inscrições</h1>
     <hr>
-    
+    <label>Registro Funcional:</label>
+    <input type="text" name="rf" id="rf"><br>
+    <button type="submit">Salvar Inscrição</button>
+
+    <hr>
+    <h2>Vagas Disponíveis</h2>
+    <p>Manhã:</p>
+    <p>Tarde:</p>
+    <hr>
+    <ul class="lista">
+
+    </ul>
+
     <!-- JavaScript (Opcional) -->
      <script>
       console.log('Teste iniciado com sucesso');
+      
+      const $meuForm = document.querySelector('form');
 
+      $meuForm.addEventListener('submit', function salvarInscricao(info) {
+        info.preventDefault();
+        const $campoRF = document.querySelector('input[name="rf"]');
+        alert($campoRF);
+      })
      </script>
     <!-- jQuery primeiro, depois Popper.js, depois Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
